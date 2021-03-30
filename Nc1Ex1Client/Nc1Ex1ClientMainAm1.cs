@@ -11,7 +11,7 @@ namespace Nc1Ex1Client
 
 		class Client : JcCtUnity1.JcCtUnity1
 		{
-			public Client() : base(Encoding.Default) { }
+			public Client() : base(Encoding.Unicode) { }
 			public void qv(string s1) { innLogOutput(s1); }
 
 			// JcCtUnity1.JcCtUnity1
