@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;s
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -16,7 +16,7 @@ namespace Nc1Ex1Client
 
 			// JcCtUnity1.JcCtUnity1
 			protected override void innLogOutput(string s1) { Console.WriteLine(s1); }
-			protected override void onConnect(JcCtUnity1.NwRst1 rst1, Exception ex = null)
+			protected override void onConnect(JcCtUnity1.NwRst1 rst1, System.Exception ex = null)
 			{
 				qv("Dbg on connect: " + rst1);
 				int pkt = 1111;
