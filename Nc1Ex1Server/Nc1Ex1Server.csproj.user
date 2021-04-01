@@ -10,4 +10,7 @@
     <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
     <EnableSQLServerDebugging>true</EnableSQLServerDebugging>
   </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>..\Nc1Lib\</ReferencePath>
+  </PropertyGroup>
 </Project>

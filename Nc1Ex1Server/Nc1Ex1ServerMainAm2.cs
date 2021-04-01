@@ -44,7 +44,7 @@ namespace Nc1Ex1Server
 			public override void onNccpcNwEnter(int cti, string peer) { qv("Dbg NwEnter ct:" + cti + " Peer:" + peer); mCs.Add(cti); }
 			//public override NccpcMemmgr2Obj1 onNccpcNwEncode(int cti, int out desclen, NccpcMemmgr2Obj1 srcobj, int srclen, unsigned char cft) { return null; }
 			//public override NccpcMemmgr2Obj1 onNccpcNwDecode(int cti, int out desclen, NccpcNw1StreamWar1 srcsw, unsigned char cft) { return null; }
-			public override void onNccpcNwRecv(int cti, NccpcDll.NccpcNw1Pk2 ncpk) { qv("Dbg NwRecv Type:" + ncpk.getType() + " Len:" + ncpk.getDataLen()); using (var pkw = ncpk.copyDeep()) { ncpk.send(mCs, pkw); } }
+			public override void onNccpcNwRecv(int cti, NccpcDll.NccpcNw1Pk2 ncpk) { qv("Dbg NwRecv Type:" + ncpk.getType() + " Len:" + ncpk.getDataLen()); using (var pkw = ncpk.copyDeep()) { send(mCs, pkw); } }
 			public override void onNccpcNwLeave(int cti) { qv("Dbg NwLeave ct:" + cti + " remain:" + (mCs.Count - 1)); mCs.Remove(cti); }
 
 		}
