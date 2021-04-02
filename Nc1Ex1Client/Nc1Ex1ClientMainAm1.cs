@@ -11,7 +11,7 @@ namespace Nc1Ex1Client
 
 		class Client : JcCtUnity1.JcCtUnity1
 		{
-			public Client() : base(Encoding.Unicode) { }
+			public Client() : base(System.Text.Encoding.Unicode) { }
 			public void qv(string s1) { innLogOutput(s1); }
 
 			// JcCtUnity1.JcCtUnity1
@@ -22,7 +22,7 @@ namespace Nc1Ex1Client
 				int pkt = 1111;
 				using (JcCtUnity1.PkWriter1Nm pkw = new JcCtUnity1.PkWriter1Nm(pkt))
 				{
-					pkw.wInt32u((UInt32)2222);
+					pkw.wInt32u(2222);
 					this.send(pkw);
 				}
 				qv("Dbg send packet Type:" + pkt);
